@@ -49,8 +49,9 @@ export default function FAQs() {
                 className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
                 onClick={() => toggle(idx)}
                 aria-expanded={openIndex === idx}
+                aria-label={`Toggle answer for: ${faq.question}`}
               >
-                <span className="font-semibold text-text-primary text-base">
+                <span className="font-semibold text-foreground text-base">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -58,7 +59,7 @@ export default function FAQs() {
                 />
               </button>
               <div
-                className={`px-6 pb-5 text-text-secondary text-sm transition-all duration-300 ease-in-out ${openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                className={`px-6 pb-5 text-foreground text-sm transition-all duration-300 ease-in-out ${openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
                 style={{ overflow: "hidden" }}
               >
                 {openIndex === idx && <div>{faq.answer}</div>}

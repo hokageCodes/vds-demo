@@ -10,14 +10,14 @@ export default function ContactPage() {
       <section className="relative h-[32rem] flex items-center justify-center overflow-hidden" aria-label="Contact Hero">
         <div className="absolute inset-0">
           <Image
-            src="/contact.jpeg"
+            src="/contact.webp"
             alt="Contact background"
             fill
             className="object-cover"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-blue-900/70" aria-hidden="true"></div>
+          <div className="absolute inset-0 bg-blue-900/80" aria-hidden="true"></div>
         </div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="font-heading text-5xl lg:text-6xl font-bold mb-6">Get in Touch</h1>
@@ -39,13 +39,13 @@ export default function ContactPage() {
             <Phone className="text-accent mb-2" size={32} />
             <div className="font-bold text-foreground mb-1">Call Us</div>
             <div className="text-foreground text-sm">Mon-Fri from 8am to 5pm.</div>
-            <a href="tel:+2348001234567" className="text-accent font-semibold mt-1">+234 800 123 4567</a>
+            <a href="tel:+2348001234567" className="text-accent font-semibold mt-1 underline hover:text-foreground">+234 800 123 4567</a>
           </div>
           <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center border border-muted">
             <Mail className="text-accent mb-2" size={32} />
             <div className="font-bold text-foreground mb-1">Email Us</div>
             <div className="text-foreground text-sm">Send us a query anytime.</div>
-            <a href="mailto:info@vdsglobal.com" className="text-accent font-semibold mt-1">info@vdsglobal.com</a>
+            <a href="mailto:info@vdsglobal.com" className="text-accent font-semibold mt-1 underline hover:text-foreground">info@vdsglobal.com</a>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 <textarea id="message" name="message" rows={4} className="w-full rounded-lg border border-muted px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Tell us more about your shipment needs..."></textarea>
               </div>
               <div className="md:col-span-2 flex justify-end mt-2">
-                <button type="submit" className="bg-accent text-accentFg px-8 py-3 rounded-xl font-semibold text-lg flex items-center gap-2 hover:bg-accent/90 transition-colors">
+                <button type="submit" className="bg-accent text-white px-8 py-3 rounded-xl font-semibold text-lg flex items-center gap-2 hover:bg-accent/90 transition-colors" aria-label="Send message">
                   Send Message <ArrowRight size={18} />
                 </button>
               </div>

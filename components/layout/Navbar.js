@@ -32,10 +32,10 @@ export default function Navbar() {
           </div>
           {/* CTAs (Tablet + Desktop, hidden on mobile) */}
           <div className="hidden md:flex lg:flex gap-3">
-            <Button variant="default" className="bg-accent hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-md">
+            <Button variant="default" className="bg-accent hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-md" aria-label="Get a Quote">
               Get a Quote
             </Button>
-            <Button variant="outline" className="border-accent text-accent px-6 py-3 rounded-lg text-sm font-semibold">
+            <Button variant="outline" className="border-accent text-accent px-6 py-3 rounded-lg text-sm font-semibold bg-white" aria-label="Track Shipment">
               Track Shipment
             </Button>
           </div>
@@ -43,6 +43,7 @@ export default function Navbar() {
           <button
             className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -65,10 +66,10 @@ export default function Navbar() {
             <Link href="/contact" className="hover:text-accent transition">
               Contact Us
             </Link>
-            <Button variant="default" className="bg-accent hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-md w-full">
+            <Button variant="default" className="bg-accent hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-md w-full" aria-label="Get a Quote">
               Get a Quote
             </Button>
-            <Button variant="outline" className="border-accent text-accent px-6 py-3 rounded-lg text-sm font-semibold w-full">
+            <Button variant="outline" className="border-accent text-accent px-6 py-3 rounded-lg text-sm font-semibold w-full bg-white" aria-label="Track Shipment">
               Track Shipment
             </Button>
           </div>

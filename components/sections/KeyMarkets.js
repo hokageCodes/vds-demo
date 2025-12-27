@@ -56,7 +56,7 @@ export default function KeyMarkets() {
         <div className="flex-1 w-full flex justify-center items-center">
           <div className="rounded-2xl overflow-hidden shadow-md bg-white/60">
             <Image
-              src="/africa.jpeg"
+              src="/africa.webp"
               alt="World map logistics"
               width={500}
               height={350}

@@ -7,7 +7,7 @@ export default function ParallaxCTA() {
       style={{
         backgroundAttachment: 'fixed',
         backgroundImage:
-          "url('/hero.jpeg')",
+          "url('/hero.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

@@ -35,55 +35,55 @@ export default function ServicesPage() {
       id: "air-freight",
       title: "Need Air Cargo Company in Lagos Nigeria?",
       description: "VDS Global Logistics Ltd is your option! We are connected with most national and international airlines, offering unlimited import/export cargo space, with most competitive prices. We have no weight, size or piece limitations. Be rest assured your cargo is handled with utmost care.",
-      image: "/services/air-freight.jpeg"
+      image: "/services/air-freight.webp"
     },
     {
       id: "sea-freight",
       title: "Ocean Freight to Lagos Nigeria",
       description: "VDS Global Logistics Ltd offer a professional, comprehensive and cost effective ocean freight solution from China, UK, USA, India, South Africa, Turkey etc. to Nigeria, covering worldwide imports and exports, 20ft containers, 40ft containers, Cargo Groupage, Sea Cargo Consolidation, FCL/LCL, RORO.",
-      image: "/services/sea-freight.jpeg"
+      image: "/services/sea-freight.webp"
     },
     {
       id: "customs",
       title: "Need a Clearing Agent in Lagos",
       description: "VDS Global Logistics Ltd provide best-in-all customs clearing services that expedite processes of our client’s supply chains. Our licensed custom expert team can pre-clear and initiate entry of cargo before arrival. We handle normal cargo & dangerous goods clearing at both Air Port and various Sea Ports in Nigeria.",
-      image: "/services/clearing.jpeg"
+      image: "/services/clearing.webp"
     },
     {
       id: "door-to-door",
       title: "Need International Door to Door cargo Handling Agent?",
       description: "FVDS Global Logistics Ltd is here for you! With our well-crafted network of partners across the globe, we pick up your cargo from any country and deliver to your door step in Nigeria.",
-      image: "/services/d2d.jpeg"
+      image: "/services/d2d.webp"
     },
     {
       id: "haulage",
       title: "In need of a Container Haulage Company in Apapa?",
       description: "VDS Global Logistics Ltd is here to assist you in moving your bulk cargo, 20ft containers & 40ft containers from APM Terminals, TICT, Port & Cargo, and other Terminals in Lagos to your preferred destination in Nigeria.",
-      image: "/services/trucking.jpeg"
+      image: "/services/trucking.webp"
     },
     {
       id: "procurement",
       title: "Need to Buy goods from China to Nigeria?",
       description: "Through our strong international relationship with our vendors, VDS Global Logistics Ltd assists its clients to source for their goods from China, USA and UK within the approved time. We make purchase from Chinese online stores, 1688.com and Alibaba.",
-      image: "/services/procurement.jpeg"
+      image: "/services/procurement.webp"
     },
     {
       id: "project",
       title: "Need a Project Cargo Logistics Company in Lagos?",
       description: "VDS Global Logistics Ltd is the right choice! Our Team of project logistics experts can handle consignments of various dimensions and complexity that requires specialized lifting equipment and team of certified riggers.",
-      image: "/services/project.jpeg"
+      image: "/services/project.webp"
     },
     {
       id: "storage",
       title: "In need of Warehouse in Lagos?",
       description: "VDS Global Logistics Ltd offer a first class warehousing and distribution services that are equipped with the latest machinery. We have Warehouse facilities that allow for the efficient management of various aspects of the supply chain requirements of our clients. There is insurance cover which indemnifies our client against theft, loss, fire or damage.",
-      image: "/services/project.jpeg"
+      image: "/services/project.webp"
     },
     {
       id: "export",
       title: "Do you need to Export from Nigeria?",
       description: "VDS Global Logistics Ltd will assist you in exporting your cargo to different countries. We export to USA, UK, Canada, South Africa and the rest. We export Agricultural produce, goods manufactured in Nigeria and goods for repair and return.",
-      image: "/services/project.jpeg"
+      image: "/services/project.webp"
     },
   ];
 
@@ -132,7 +132,7 @@ export default function ServicesPage() {
       <section className="relative h-[32rem] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/services/services-hero.jpeg"
+            src="/services/services-hero.webp"
             alt="Services"
             className="w-full h-full object-cover"
           />
@@ -164,10 +164,11 @@ export default function ServicesPage() {
                       onClick={() => scrollToService(link.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 border font-medium text-left ${
                         isActive
-                          ? "bg-accent text-accentFg border-accent shadow-md"
-                          : "text-foreground border-transparent hover:bg-muted hover:text-accentFg"
+                          ? "bg-accent text-white border-accent shadow-md"
+                          : "text-foreground border-transparent hover:bg-muted hover:text-accent"
                       }`}
                       aria-current={isActive ? "true" : undefined}
+                      aria-label={`Jump to ${link.label} section`}
                     >
                       <Icon size={20} />
                       <span>{link.label}</span>
@@ -177,12 +178,12 @@ export default function ServicesPage() {
               </nav>
 
               {/* Contact Card */}
-              <div className="mt-8 bg-accent rounded-2xl p-6 text-accentFg">
+              <div className="mt-8 bg-accent rounded-2xl p-6 text-white">
                 <h4 className="font-bold text-lg mb-4">Need a Custom Solution?</h4>
-                <p className="text-sm text-white/80 mb-4">
+                <p className="text-sm text-white mb-4">
                   Our logistics team can create the perfect solution for you.
                 </p>
-                <button className="w-full bg-primary text-accent px-4 py-3 rounded-xl font-semibold hover:bg-muted transition-colors">
+                <button className="w-full bg-white text-accent px-4 py-3 rounded-xl font-semibold hover:bg-muted transition-colors border border-accent" aria-label="Contact Us for a custom solution">
                   Contact Us
                 </button>
               </div>
@@ -212,15 +213,15 @@ export default function ServicesPage() {
                     {/* Content */}
                     <CardContent className="p-8 lg:p-12 flex flex-col justify-center">
                       <CardHeader className="p-0 mb-4">
-                        <CardTitle className="text-3xl lg:text-4xl font-bold text-gray-900">
+                        <CardTitle className="text-3xl lg:text-4xl font-bold text-foreground">
                           {service.title}
                         </CardTitle>
                       </CardHeader>
-                      <p className="text-gray-600 leading-relaxed mb-6">
+                      <p className="text-foreground leading-relaxed mb-6">
                         {service.description}
                       </p>
                       <CardFooter className="p-0">
-                        <button className="bg-accent text-accentFg px-6 py-3 rounded-xl font-semibold flex items-center gap-2 w-fit hover:shadow-xl transition-all duration-300 group">
+                        <button className="bg-accent text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 w-fit hover:shadow-xl transition-all duration-300 group" aria-label={`Request a quote for ${service.title}`}> 
                           Request Quote
                           <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                         </button>

@@ -41,17 +41,17 @@ export default function Footer() {
           </p>
           <div className="flex gap-3 mt-2">
             <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-              <Facebook size={20} className="hover:text-accent transition" />
+              <Facebook size={20} className="text-white hover:text-accent transition" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <Linkedin size={20} className="hover:text-accent transition" />
+              <Linkedin size={20} className="text-white hover:text-accent transition" />
             </a>
           </div>
         </div>
         {/* Our Solutions */}
         <div>
           <div className="font-semibold mb-3 text-accent">Our Solutions</div>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-white">
             {solutions.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -60,7 +60,7 @@ export default function Footer() {
         {/* Our Services */}
         <div>
           <div className="font-semibold mb-3 text-accent">Our Services</div>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-white">
             {services.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -69,20 +69,20 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <div className="font-semibold mb-3 text-accent">Contact</div>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-white">
             <li>7, ST Finbarr's College Road, Akoka Yaba, Lagos, Nigeria.</li>
             <li className="flex items-center gap-2"><Phone size={16} /> +2347049397434</li>
             <li className="flex items-center gap-2"><Mail size={16} /> vdsgloballogisticsltd@gmail.com</li>
             <li className="flex items-center gap-2"><Mail size={16} /> info@vdsgloballogisticsltd</li>
-            <li>Website: <a href="https://www.vdsgloballogistics.com" className="underline hover:text-accent">www.vdsgloballogistics.com</a></li>
+            <li>Website: <a href="https://www.vdsgloballogistics.com" className="underline text-accent hover:text-white">www.vdsgloballogistics.com</a></li>
           </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-6 text-xs text-white/60 gap-2">
         <div>&copy; {new Date().getFullYear()} VDS Global Logistics. All rights reserved.</div>
         <div className="flex gap-4">
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
+          <Link href="/privacy" className="text-accent hover:text-white underline">Privacy Policy</Link>
+          <Link href="/terms" className="text-accent hover:text-white underline">Terms of Service</Link>
         </div>
       </div>
     </footer>

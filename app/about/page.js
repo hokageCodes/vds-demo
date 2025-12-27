@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="relative h-[32rem] flex items-center justify-center overflow-hidden" aria-label="About Hero">
         <div className="absolute inset-0">
           <Image
-            src="/about/abby.jpeg"
+            src="/about/abby.webp"
             alt="Cargo containers and logistics background"
             fill
             className="object-cover"
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </ul>
           </div>
           <div className="relative w-full h-72 rounded-2xl overflow-hidden border border-muted">
-            <Image src="/africa.jpeg" alt="Warehouse team at work" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
+            <Image src="/africa.webp" alt="Warehouse team at work" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
             <div className="absolute bottom-4 left-4 bg-white/90 rounded-xl px-4 py-2 shadow text-xs font-semibold text-foreground">
               <span className="block">HEADQUARTERS</span>
               <span className="block font-normal">Apapa, Lagos, Nigeria</span>
